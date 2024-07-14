@@ -1,0 +1,13 @@
+{
+  "package": "com.slava_110.waterlessfarmland.mixin",
+  "required": true,
+  "refmap": "mixins.waterlessfarmland.refmap.json",
+  "target": "@env(DEFAULT)",
+  "minVersion": "0.8.5",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "MixinBlockFarmland"
+  ],
+  "server": [],
+  "client": []
+}

@@ -1,0 +1,16 @@
+[
+  {
+    "modid": "waterlessfarmland",
+    "name": "Waterless Farmland",
+    "description": "Disable farmland water requirement",
+    "version": "${modVersion}",
+    "mcversion": "1.12.2",
+    "url": "",
+    "updateUrl": "",
+    "authorList": ["slava_110"],
+    "credits": "",
+    "logoFile": "",
+    "screenshots": [],
+    "dependencies": []
+  }
+]
