@@ -40,4 +40,18 @@ abstract class MixinBlockFarmland extends Block {
     public void hasWater(World worldIn, BlockPos pos, CallbackInfoReturnable<Boolean> ci) {
         ci.setReturnValue(true);
     }
+
+    @Inject(
+            method = "onBlockActivated",
+            at = @At("HEAD"),
+            cancellable = true
+    )
+    public void onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, CallbackInfoReturnable<Boolean> ci) {
+        ItemStack heldItem = playerIn.getHeldItem(hand);
+        if (!heldItem.isEmpty() && OreDictionary.containsMatch(false, OreDictionary.getOres("fertilizer"), heldItem)) {
+            worldIn.setBlockState(pos, Blocks.FARMLAND.getDefaultState().withProperty(BlockFarmland.MOISTURE, 7));
+            heldItem.shrink(1);
+            ci.setReturnValue(true);
+        }
+    }
 }
