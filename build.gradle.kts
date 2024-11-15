@@ -1,6 +1,6 @@
 plugins {
     id("org.jetbrains.gradle.plugin.idea-ext") version "1.1.7"
-    id("com.gtnewhorizons.retrofuturagradle") version "1.4.0"
+    id("com.gtnewhorizons.retrofuturagradle") version "1.4.1"
 }
 
 group = "com.slava_110.waterlessfarmland"
@@ -9,7 +9,6 @@ version = "1.0.0"
 java {
     toolchain {
         languageVersion.set(JavaLanguageVersion.of(8))
-        vendor.set(JvmVendorSpec.ADOPTIUM)
     }
 }
 
