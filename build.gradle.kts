@@ -33,7 +33,10 @@ repositories {
 }
 
 dependencies {
-    val mixin = modUtils.enableMixins("zone.rong:mixinbooter:8.9") as String
+    val mixin = modUtils.enableMixins(
+        "zone.rong:mixinbooter:8.9",
+        "mixins.waterlessfarmland.refmap.json"
+    ) as String
 
     annotationProcessor(mixin) {
         isTransitive = false
